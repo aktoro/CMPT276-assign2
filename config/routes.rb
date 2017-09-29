@@ -1,5 +1,18 @@
 Rails.application.routes.draw do
+  get 'assign1/q1'
+
+  get 'say/hello'
+
+  get 'say/goodbye'
+
+  get 'say/decide'
+  get 'say/index'
+  post 'say/decide'
+
+
   resources :widgets
+  match ':controller(/:action(/:id))', :via => :get 
+  match ':controller(/:action(/:id))', :via => :post
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
