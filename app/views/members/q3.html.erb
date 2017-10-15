@@ -57,28 +57,7 @@ for(var i = 0; i < array.length; i++) {
 </script>
 
 
-</table>
 
-<table style="width:50%">
-  <thead>
-    <tr>
-      <th>Student</th>
-      <th>Percentage</th>
-      <th>Grade</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @enrollforcourse.each do |a| %>
-      <tr>
-        <td><%= a.student_id %></td>
-        <td><%= a.lettergrade %></td>
-        <td><%= a.percentage %></td>
-       
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
 <%= link_to 'Assign Grades', assign1_q1_path %><br>
 
