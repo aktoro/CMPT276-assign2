@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
+  resources :enrolls
+  resources :courses
+  resources :students
+  resources :people
+  resources :things
+  resources :courses, :member => { :studs => :get, :save => :post }
   get 'assign1/q1'
+  get 'assign2/q2'
+  get 'members/q3'
 
   get 'say/hello'
 
