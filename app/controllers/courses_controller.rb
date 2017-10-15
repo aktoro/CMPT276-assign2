@@ -8,7 +8,14 @@ class CoursesController < ApplicationController
     @students = Student.all
     @enrolls = Enroll.all
 
-
+    @courses = Course.all
+    @students = Student.all
+    @enrolls = Enroll.all
+    # @a = Student.where(Student.course_id =>Course.course_id)
+    # @courses.enrolls = a.all
+    cip = params[:course_id]
+    @enrollforcourse = Enroll.where(course_id=>cip)
+    render 'q3'
 
    
   end
