@@ -26,12 +26,12 @@ function make(){
 	}
 
 	if ((parseFloat(perc)<=parseFloat(perc1)) || (parseFloat(perc1)<=parseFloat(perc2)) || (parseFloat(perc2)<=parseFloat(perc3)) || (parseFloat(perc3)<=parseFloat(perc4)) || (parseFloat(perc4)<=parseFloat(perc5)) || (parseFloat(perc5)<=parseFloat(perc6)) || (parseFloat(perc6)<=parseFloat(perc7)) || (parseFloat(perc7)<=parseFloat(perc8)) || (parseFloat(perc8)<=parseFloat(perc9)) || (parseFloat(perc9)<=parseFloat(perc10)) || (parseFloat(perc10)<=parseFloat(perc11))){
-		document.getElementById("errorm").innerHTML="Error! Make sure correct values are inputted!";
+		document.getElementById("errorm").innerHTML="Error! Incorrect numeric entry was inputted!";
 		return;
 	} 
 
 	if ((parseFloat(perc10)>=parseFloat(perc9)) || (parseFloat(perc9)>=parseFloat(perc8)) || (parseFloat(perc8)>=parseFloat(perc7)) || (parseFloat(perc7)>=parseFloat(perc6)) || (parseFloat(perc6)>=parseFloat(perc5)) || (parseFloat(perc5)>=parseFloat(perc4)) || (parseFloat(perc4)>=parseFloat(perc3)) || (parseFloat(perc3)>=parseFloat(perc2)) || (parseFloat(perc2)>=parseFloat(perc1)) || (parseFloat(perc1)>=parseFloat(perc)) || (parseFloat(perc10)>=parseFloat(perc))){
-		document.getElementById("errorm").innerHTML="Error! Make sure correct values are inputted!";
+		document.getElementById("errorm").innerHTML="Error! Make sure numeric entry was inputted!";
 		return;
 	}
 	// if (parseFloat(perc)<= parseFloat(perc1) && document.getElementById("ss1").style.borderColor != "red"){

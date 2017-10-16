@@ -5,6 +5,13 @@ for (i=0; i<arr.length; i++){
   tot=arr[i];
   console.log(tot);
 }
+
+var arr2 = <%= @stper.to_json %>;
+var tot=0;
+for (i=0; i<arr2.length; i++){
+  tot=arr2[i];
+  console.log(tot);
+}
 </script>
 
 <body id="cc">
@@ -32,7 +39,7 @@ table, th, td {
       <tr>
         <td><%= course.course_id %></td>
         <td><%= course.description %></td>
-        <td><%= link_to 'Show', members_q3_path %></td>
+        <td><%= link_to 'Show', members_q3_path(@stid, @arr2) %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -44,15 +51,7 @@ table, th, td {
 
 <br>
 
-<pre>
-  <%= @stid.inspect %>
-</pre>
-<pre>
-  <%= @stper.inspect %>
-</pre>
-<pre>
-  <%= @stlg.inspect %>
-</pre>
+<!--  -->
 
 <%= link_to 'New Course', new_course_path %><br>
 <%= link_to 'Home', assign2_q2_path %><br>

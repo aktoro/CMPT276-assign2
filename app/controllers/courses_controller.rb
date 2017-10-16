@@ -8,7 +8,17 @@ class CoursesController < ApplicationController
     @students = Student.all
     @enrolls = Enroll.all
 
+    @stid=[]
+    @stper=[]
+    @stlg=[]
+    @enrolls.product(@courses).each do |u, v|
+      if u.course_id == v.course_id
+      @stid << u.course_id
+      @stper << v.course_id
+      end
+            # @a = Student.where(course_id =>.course_id)
 
+    end 
 
    
   end
